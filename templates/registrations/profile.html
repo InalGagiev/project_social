@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block main %}
+{% if request.user.first_name %}
+    {{user.first_name}}
+{% else %}
+    У вас не заполнено поле Имя
+{% endif %}
+
+{% if request.user.last_name %}
+    {{user.last_name}}
+{% else %}
+    У вас не заполнено поле Фамилия
+{% endif %}
+
+ <img width='250px' src="{{ user.profile.image.url }}"></br></br>
+
+{% endblock %}

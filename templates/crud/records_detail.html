@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<img src="{{ model.image.url }}" alt="lll" width="300px">
+<h1>{{model.title}}</h1>
+<h3>{{model.full_text|safe}}</h3>
+<h4>{{model.date}}</h6>
+<a href="{% url 'list-delete' model.id%}">удалить статью</a>
+{% endblock %}

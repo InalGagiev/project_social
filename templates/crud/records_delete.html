@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<h1>Вы точно хотите удалить {{ model.title }} </h1>
+<form method="post">
+    {% csrf_token %}
+    <button href="btn btn-success" type="submit">удалить</button>
+</form>
+{% endblock %}
